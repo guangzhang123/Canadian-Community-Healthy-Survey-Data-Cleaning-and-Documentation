@@ -1,0 +1,22 @@
+rename_map:
+  DHH_SEX: sex
+  DHHGAGE: age
+  SMK_201: smoking_status
+  EDUDGLEV: education_level
+  BMI: bmi
+  PA_100: physical_activity
+  ALC_1: alcohol_use
+  INCGHH: household_income
+  SDCDRV: has_driver_license
+
+impute:
+  numeric: median
+  categorical: mode
+
+outlier_z: 4.0
+
+summary:
+  - ['sex', 'education_level']
+  - ['smoking_status', 'alcohol_use']
+  - {'bmi': ['mean', 'std']}
+  - {'age': ['min', 'max', 'mean']}
